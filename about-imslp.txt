@@ -1,0 +1,4 @@
+The International Music Score Library Project, also known as the Petrucci Music Library after publisher Ottaviano Petrucci, is a subscription-based project for the creation of a virtual library of public-domain music scores.
+As of May 21, 2020 at 9:46 AM Eastern Standard Time, ISMLP stands at an index of:
+159,144 works · 18,825 composers · 539 performers
+515,993 scores · 10,474,167+ pages · 61,121 recordings
