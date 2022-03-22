@@ -1,2 +1,3 @@
-# imslp
-resources to process data from the IMSLP API
+# process-imslp-data
+resources to process data from the IMSLP API.
+
