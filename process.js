@@ -38,4 +38,4 @@ const Chopin = new Composer("Chopin, Frédéric");
 const Debussy = new Composer("Debussy, Claude");
 const Tchaikovsky = new Composer("Tchaikovsky, Pyotr");
 
-Mozart.exportWorks();
+console.log(Mozart.works);

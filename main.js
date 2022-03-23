@@ -8,7 +8,12 @@ const axios = require("axios");
 const composer = 1; // not currently supported
 const composition = 2;
 
-const getImslpData = async (type = composition, start = 0, end = 1000) => {
+const getImslpData = async (
+  type = composition,
+  start = 0,
+  end = 1000,
+  pause = 10000
+) => {
   const timestamp = help.timestamp();
   help.writeFile(`./data/imslp-data_${timestamp}.json`, "");
   help.writeFile(`./logs/log_${timestamp}.txt`, "");
@@ -43,7 +48,7 @@ const getImslpData = async (type = composition, start = 0, end = 1000) => {
           moreAvailable = dataObj.metadata.moreresultsavailable;
         })
         .catch((err) => console.log(err));
-      await help.pause(10000);
+      await help.pause(pause);
     }
     help.appendFile(`./data/imslp-data_${timestamp}.json`, data, "json");
   } catch (err) {
@@ -54,4 +59,4 @@ const getImslpData = async (type = composition, start = 0, end = 1000) => {
   }
 };
 
-getImslpData(composition, 0, 250000);
+getImslpData(composition, 0, 3000, 5000);
