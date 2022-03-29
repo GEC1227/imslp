@@ -47,6 +47,10 @@ const Composer = function (name) {
         `./data/opus numbers-${this.name}.txt`,
         this.workNumbers.join("\n")
       );
+    } else {
+      console.error(
+        "The exportData function requires a 'works' or 'work numbers' argument."
+      );
     }
   };
 };
@@ -77,3 +81,5 @@ const Scriabin = new Composer("Scriabin, Aleksandr");
 const Schubert = new Composer("Schubert, Franz");
 const Tchaikovsky = new Composer("Tchaikovsky, Pyotr");
 const Vivaldi = new Composer("Vivaldi, Antonio");
+
+// Bach.exportData("works");
