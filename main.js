@@ -1,4 +1,6 @@
-// This file contains the main script, which gets data from the IMSLP API
+// This file contains the main script, which gets data from the IMSLP API.
+
+// For reference, the "data" folder contains a JSON file of all composers/compositions as of March, 2022.
 
 const help = require("./help");
 const fs = require("fs");
