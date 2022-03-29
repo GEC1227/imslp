@@ -31,16 +31,23 @@ const getWorkNumbers = (works) => {
   });
 };
 
-// build-a-composer
+// build composers
 const Composer = function (name) {
   this.name = name;
   this.works = getWorks(this.name, imslpData);
   this.workNumbers = getWorkNumbers(this.works);
-  this.exportWorks = function () {
-    help.writeFile(
-      `./data/Compositions by ${this.name}.txt`,
-      this.works.join("\n")
-    );
+  this.exportData = function (data) {
+    if (data === "works") {
+      help.writeFile(
+        `./data/compositions-${this.name}.txt`,
+        this.works.join("\n")
+      );
+    } else if (data === "work numbers") {
+      help.writeFile(
+        `./data/opus numbers-${this.name}.txt`,
+        this.workNumbers.join("\n")
+      );
+    }
   };
 };
 
@@ -70,5 +77,3 @@ const Scriabin = new Composer("Scriabin, Aleksandr");
 const Schubert = new Composer("Schubert, Franz");
 const Tchaikovsky = new Composer("Tchaikovsky, Pyotr");
 const Vivaldi = new Composer("Vivaldi, Antonio");
-
-console.log(Mozart.works);
